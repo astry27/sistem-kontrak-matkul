@@ -12,9 +12,14 @@ class Mahasiswa extends Model
     protected $key_mahasiswa = ['id_mahasiswa'];
 
     public function fakultas(){
-        return $this->hasOne(Fakultas::class);
+        return $this->belongsTo(Fakultas::class);
     }
+    
     public function prodi(){
-        return $this->hasOne(Prodi::class);
+        return $this->belongsTo(Prodi::class);
+    }
+
+    public function matkul(){
+        return $this->belongsToMany(Matkul::class);
     }
 }

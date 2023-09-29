@@ -13,6 +13,6 @@ class Login_dosen extends Model
     protected $key_login_dosen = ['id_login_dosen'];
 
     public function dosen(){
-        return $this->HasOne(Dosen::class);
+        return $this->hasOne(Dosen::class);
     }
 }

@@ -20,6 +20,6 @@ class Prodi extends Model
     }
 
     public function fakultas(){
-        return $this->hasOne(Fakultas::class);
+        return $this->belongsTo(Fakultas::class);
     }
 }
